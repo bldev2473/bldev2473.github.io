@@ -4,7 +4,7 @@
 # © 2017-2019 Cotes Chung
 # MIT licensed
 
-
+remote_theme: cotes2020/jekyll-theme-chirpy
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 #--------------------------
 
@@ -19,7 +19,6 @@ description: >-                        # used by seo meta and the atom feed
 
 # fill in the base hostname & protocol for your site, e.g., 'https://username.github.io'
 url: 'https://bldev2473.github.io'
-remote_theme: cotes2020/jekyll-theme-chirpy
 
 author: your_full_name                  # change to your full name
 
