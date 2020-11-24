@@ -19,22 +19,22 @@ boolean matches(String regex)
 ```
 > 해당 문자열이 주어진 정규표현식과 일치하는 지에 대한 참/거짓 값을 반환
 
-```
+```java
 String replaceAll(String regex, String replacement)
 ```
 > 해당 문자열에서 주어진 정규표현식과 일치하는 부분 문자열을 주어진 문자열로 대체
 
-```
+```java
 String replaceFirst(String regex, String replacement)
 ```
 > 해당 문자열에서 주어진 정규표현식과 일치하는 부분 문자열 중 첫 번째 문자열을 주어진 문자열로 대체
 
-```
+```java
 String[] split(String regex)
 ```
 > 주어진 정규표현식과 일치하는 문자열을 기준으로 해당 문자열을 분리
 
-```
+```java
 String[] split(String regex, int limit)
 ```
 > 위 메소드와 동일한 기능
@@ -50,7 +50,7 @@ String[] split(String regex, int limit)
 
 두 번째 방법으로는 java.util.regex 패키지에 존재하는 Pattern과 Matcher 클래스의 객체를 이용하는 것입니다.
 
-이 방법은 정규표현식을 사용한 패턴 매칭을 위해 자바에서 제공하는 클래스를 사용하는 것이며 https://docs.oracle.com/javase/tutorial/essential/regex/index.html 문서를 통해 각 클래스에서 제공하는 메소드 및 처리 방식을 확인할 수 있습니다.
+이 방법은 정규표현식을 사용한 패턴 매칭을 위해 자바에서 제공하는 클래스를 사용하는 것이며 [regex](https://docs.oracle.com/javase/tutorial/essential/regex/index.html) 문서를 통해 각 클래스에서 제공하는 메소드 및 처리 방식을 확인할 수 있습니다.
 
 Pattern 클래스는 정규표현식의 컴파일된 표현이며, Mathcer 클래스는 패턴을 해석하여 문자 시퀀스에서 어떤 것이 일치하는 지 판별하는 작업을 수행하는 엔진입니다.
 
