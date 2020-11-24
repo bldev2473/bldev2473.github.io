@@ -1,6 +1,6 @@
 ---
-layout: post
 title: "[Java] 정규표현식 1"
+categories: Java
 ---
 
 <p>정규표현식을 사용하기 위해 자바에서 제공하는 방법에는 여러 가지가 있습니다.
