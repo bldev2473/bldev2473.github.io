@@ -16,11 +16,11 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "뿅망치 개발 블로그"
+title                    : "Bldev's Blog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "뿅망치"
-description              : "개발 블로그"
+name                     : "Bldev"
+description              : "나의 개발 로그가 쌓이는 곳"
 url                      : "https://bldev2473.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "bldev2473/bldev2473.github.io"
@@ -93,9 +93,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Bldev"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  bio              : "될 때까지 합니다."
   location         : "Somewhere"
   email            :
   links:
