@@ -17,7 +17,9 @@ fillna() 함수를 사용하면 특정 컬럼 데이터가 Null 값인 경우 �
 
 &#45; 사용법
 > 데이터프레임명['컬럼명'] = 데이터프레임명['컬럼명'].fillna(대체값)
+
 &#45; 설명: 해당 컬럼의 데이터가 Null 값인 경우 대체값으로 변환
+
 &#45; 예
 ```python
 data_df['RESULT'] = data_df['RESULT'].fillna('')
@@ -32,13 +34,17 @@ data_df['RESULT'] = data_df['RESULT'].fillna('')
 
 &#45; 사용법
 > 데이터프레임명['컬럼명'] = (조건식).astype(int)
-&#45; 설명: 해당 컬럼의 데이터에 대해 조건식을 만족할 경우 1, 만족하지 않을 경우 0으로 변환
+
+&#45; 설명: 해당 컬럼의 데이터에 대해 조건식을 만족할 경우 1, 만족하지 않을 경우 0으로 
+
 &#45; 예
 ```python
 data_df['RESULT'] = (data_df['RESULT'] == 'Y').astype(int)
 ```
   * 'RESULT' 컬럼의 데이터가 'Y'인 경우 1, 'Y'가 아닌 경우 0으로 변환
+  
 &#45; 새로운 컬럼 추가: data_df['NEW_RESULT'] = (data_df['RESULT'] == 'Y').astype(int)
+
 &#45; 참고: 단순히 True와 False를 int로 형 변환하는 것이므로 해당 컬럼에 결과를 대입시켜 주어야 한다.
 
 ## 3. numpy의 where() 함수를 사용하여 조건식에 따라 데이터 변환
@@ -52,22 +58,28 @@ numpy의 where() 함수를 사용하여 데이터프레임의 데이터를 수�
 > 데이터프레임명['컬럼명'] = np.where(조건식, 참일때 반환할 값, 거짓일 때 반환할 값)
   * 기존 값을 그대로 두고 싶다면 참 또는 거짓의 반환값에 데이터프레임명['컬럼명']을 입력한다.
   * 기존 값을 변형하고 싶다면 데이터프레임명['컬럼명'] * 3과 같이 작성한다.
+  
 &#45; 설명: 해당 컬럼의 데이터에 대해 조건식을 만족할 경우 참일때의 값, 만족하지 않을 경우 거짓일 때의 값으로 변환
+
 &#45; 예1
 ```python
 data_df['RESULT'] = np.where(data_df['RESULT'] ==  'Y', 1, 0)
 ```
   * 'RESULT' 컬럼의 데이터가 'Y'인 경우 1, 'Y'가 아닌 경우 0으로 변환
+  
 &#45; 예2
 ```python
 data_df['RESULT'] = np.where(data_df['RESULT'] == 'Y' , 1, data_df['RESULT'])
 ```
   * 'RESULT' 컬럼의 데이터가 'Y'인 경우 1로 변환, 'Y'가 아닌 경우 그대로
+  
 &#45; 새로운 컬럼 추가
 ```python
 data_df['NEW_RESULT'] = np.where(data_df['RESULT'] == 'Y', 1, 0)
 ```
+
 &#45; 참고1: numpy의 where() 함수는 기본적으로 inplace가 적용되지 않으며 옵션 설정이 불가능하다.
+
 &#45; 참고2: pandas에도 where() 함수가 존재하지만 사용 방법이 다르다. 사용 방법은 4.에 설명되어 있다.
 
 ## 4. pandas의 where() 함수를 사용하여 조건식에 따라 데이터 변환
@@ -81,18 +93,26 @@ numpy에서 제공하는 where() 함수와 pandas의 where() 함수의 시그니
 &#45; 사용법
 > 데이터프레임명['컬럼명'] = 데이터프레임명.where(조건식, 거짓일 때 반환할 값)
   * 기존 값을 변형하고 싶다면 -데이터프레임명['컬럼명'], 데이터프레임명['컬럼명'] * 3과 같이 작성한다.
+  
 &#45; 설명: 해당 컬럼의 데이터에 대해 조건식을 만족할 경우 그대로, 만족하지 않을 경우 거짓일 때의 값으로 변환
+
 &#45; 예1
 ```python
 data_df['RESULT'] = data_df.where(data_df['RESULT'] == Y, 0)
 ```
   * 'RESULT' 컬럼의 데이터가 'Y'인 경우 그대로, 'Y'가 아닌 경우 0으로 변환
+  
 &#45; 예2
 ```python
 data_df['RESULT'] = data_df.where(data_df['RESULT'] == Y, data_df['RESULT'])
 ```
   * 이렇게 작성하면 데이터가 변환되지 않는다.
-&#45; 새로운 컬럼 추가: data_df['NEW_RESULT'] = data_df.where(data_df['RESULT'] == Y, 0)
+  
+&#45; 새로운 컬럼 추가
+```python
+data_df['NEW_RESULT'] = data_df.where(data_df['RESULT'] == Y, 0)
+```
+
 &#45; 참고: where() 함수는 기본적으로 inplace가 적용되지 않지만 옵션으로 inplace를 적용할 수 있으며 이 경우 다음과 같이 사용한다.
   * 데이터프레임명.where(조건식, 거짓일 때 반환할 값, inplace=True)
 
