@@ -1,7 +1,7 @@
 ---
 title: "[Python] Pandas 데이터 정제 1"
 date: 2020-11-26 23:43:00 -0000
-categories: Java
+categories: Python
 ---
 Pandas의 데이터프레임에서 이상(비정상) 데이터를 제거하는 방법에는 여러 가지가 있습니다.
 
