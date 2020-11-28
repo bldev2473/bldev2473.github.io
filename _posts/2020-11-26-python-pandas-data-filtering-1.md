@@ -124,9 +124,3 @@ data_df['NEW_RESULT'] = data_df.where(data_df['RESULT'] == Y, 0)
 
 &#45; 참고: where() 함수는 기본적으로 inplace가 적용되지 않지만 옵션으로 inplace를 적용할 수 있으며 이 경우 다음과 같이 사용합니다.
 > 데이터프레임명.where(조건식, 거짓일 때 반환할 값, inplace=True)
-
-## 5. 사용자 정의 함수 및 apply() 함수 사용
-
-## 6. map() 함수와 람다식 사용
-
-## 7. loc 사용
