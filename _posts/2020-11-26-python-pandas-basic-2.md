@@ -11,7 +11,7 @@ categories: Python
 
 시리즈를 생성하기 위해서는 Pandas의 Series()를 사용합니다.
 
-Series() 생성자의 기본적인 시그니처(Signature)는 다음과 같습니다.
+Series() 생성자의 기본적인 시그니처(Signature)는 다음과 같습니다.  
 > Series(data=None, index=None)
 
 &#45; data: 시리즈에 포함시킬 데이터에 해당됩니다. 리스트, numpy의 ndarray, 딕셔너리, 스칼라 값이 올 수 있습니다.
@@ -34,30 +34,31 @@ Series() 생성자의 기본적인 시그니처(Signature)는 다음과 같습�
 
 #### 1) 빈 Series 생성
 > pd_series = pd.Series()
+
 인자를 전달하지 않으면 빈 Series가 생성됩니다.
 
-Series의 타입은 다음과 같으며,
+Series의 타입은 다음과 같으며,  
 > <class 'pandas.core.series.Series'>
 
-빈 Series의 출력 결과는 다음과 같습니다.
-> Series([], dtype: float64)
+빈 Series의 출력 결과는 다음과 같습니다.  
+> Series([], dtype: float64
 
 기본 자료형은 float64로 설정되어 있음을 알 수 있습니다.
 
 #### 2) Numpy의 배열(ndarray)을 사용한 Series 생성
-Numpy의 배열을 데이터로 전달하여 Series를 생성할 수 있습니다.
-> np_arr_data = np.array([1, 2, 3, 4, 5])
-> pd_series = pd.Series(np_arr_data)
+Numpy의 배열을 데이터로 전달하여 Series를 생성할 수 있습니다.  
+> np_arr_data = np.array([1, 2, 3, 4, 5])  
+> pd_series = pd.Series(np_arr_data)  
 
 인덱스를 인자로 전달하지 않으면 데이터의 개수에 따라 0부터 인덱스가 부여됩니다.
 
-출력 결과는 다음과 같습니다.
-> 0    1
-> 1    2
-> 2    3
-> 3    4
-> 4    5
-> dtype: int64
+출력 결과는 다음과 같습니다.  
+> 0    1  
+> 1    2  
+> 2    3  
+> 3    4  
+> 4    5  
+> dtype: int64  
 
 인덱스는 왼쪽, 데이터는 오른쪽에 세로로 나열된 모습입니다. Pandas의 Series는 이러한 형태로 데이터를 저장하고 저장된 데이터를 출력합니다. 데이터에 따라 인덱스가 부여된 것을 볼 수 있습니다.
 
@@ -66,12 +67,12 @@ Numpy의 배열을 데이터로 전달하여 Series를 생성할 수 있습니�
 ```python
 pd_series = pd.Series(np_arr_data, index=['a', 'b', 'c', 'd', 'e'])
 ```
-> a    1
-> b    2
-> c    3
-> d    4
-> e    5
-> dtype: int64
+> a    1  
+> b    2  
+> c    3  
+> d    4  
+> e    5  
+> dtype: int64  
 
 위 경우 인덱스는 문자열로 지정되었습니다.
 
@@ -81,11 +82,11 @@ pd_series = pd.Series(np_arr_data, index=['a', 'b', 'c', 'd', 'e'])
 pd_series = pd.Series(np_arr_data, index=['a', 'b', 'a', 'd', 'e'])
 pd_series[‘a’]
 ```
-> a    1
-> a    5
-> dtype: int64
+> a    1  
+> a    5  
+> dtype: int64  
 
-* 해시가능한 자료형이란?
+* 해시가능한 자료형이란?  
 
 #### 3) 리스트를 사용한 Series 생성
 파이썬의 리스트 자료형을 데이터로 전달하여 Series를 생성할 수 있습니다.
@@ -96,22 +97,22 @@ pd_series[‘a’]
 list_data = [1, 2, 3, 4, 5]
 pd_series = pd.Series(list_data)
 ```
-> 0    1
-> 1    2
-> 2    3
-> 3    4
-> 4    5
-> dtype: int64
+> 0    1  
+> 1    2  
+> 2    3  
+> 3    4  
+> 4    5  
+> dtype: int64  
 
 ```python
 pd_series = pd.Series(list_data, index=['a', 'b', 'c', 'd', 'e'])
 ```
-> a    1
-> b    2
-> c    3
-> d    4
-> e    5
-> dtype: int64
+> a    1  
+> b    2  
+> c    3  
+> d    4  
+> e    5  
+> dtype: int64  
 
 #### 4) 딕셔너리를 사용한 Series 생성
 파이썬의 딕셔너리 자료형을 데이터로 전달하여 Series를 생성할 수 있습니다. 다만 Numpy 배열과 리스트를 사용한 경우와는 차이점이 존재합니다.
@@ -122,10 +123,9 @@ pd_series = pd.Series(list_data, index=['a', 'b', 'c', 'd', 'e'])
 dict_data = {'a':1, 'b':2, 'c':3}
 pd_series = pd.Series(dict_data)
 ```
-
-> a    1
-> b    2
-> c    3
+> a    1  
+> b    2  
+> c    3  
 > dtype: int64
 
 인덱스를 명시적으로 전달할 수도 있습니다. 이 경우 Numpy 배열, 리스트와는 다르게 데이터의 개수만큼 인덱스를 전달하지 않아도 됩니다. 하지만 딕셔너리를 데이터로 전달하는 순간 딕셔너리의 키가 인덱스로 부여되기 때문에 옵션으로 전달한 인덱스에 키 값이 있다면 해당 인덱스에 대한 데이터가 출력되고, 키 값이 없다면 해당 인덱스에 대한 데이터는 NaN으로 출력됩니다.
@@ -135,21 +135,21 @@ pd_series = pd.Series(dict_data)
 ```python
 pd_series = pd.Series(dict_data, index=[0, 1, 2])
 ```
-> 0   NaN
-> 1   NaN
-> 2   NaN
-> dtype: float64
+> 0   NaN  
+> 1   NaN  
+> 2   NaN  
+> dtype: float64  
 
 딕셔너리 데이터의 키 값에는 0, 1, 2가 존재하지 않기 때문에 해당 인덱스에 대한 데이터는 NaN으로 출력되었습니다.
 
 ```python
 pd_series = pd.Series(dict_data, index=['a', 'b', 'c', 'd'])
 ```
-> a    1.0
-> b    2.0
-> c    3.0
-> d    NaN
-> dtype: float64
+> a    1.0  
+> b    2.0  
+> c    3.0  
+> d    NaN  
+> dtype: float64  
 
 딕셔너리 데이터의 키 값에는 ‘a’, ‘b’, ‘c’가 존재하기 때문에 해당 인덱스에 대한 데이터가 출력되었지만 ‘d’는 존재하지 않기 때문에 인덱스 ‘d’에 대한 데이터는 NaN으로 출력되었습니다.
 
@@ -164,11 +164,11 @@ pd_series = pd.Series(dict_data, index=['a', 'b', 'c', 'd'])
 scalar_data = 'Y'
 pd_series = pd.Series(scalar_data, index=[0,1,2,3,4])
 ```
-> 0    Y
-> 1    Y
-> 2    Y
-> 3    Y
-> 4    Y
-> dtype: object
+> 0    Y  
+> 1    Y  
+> 2    Y  
+> 3    Y  
+> 4    Y  
+> dtype: object  
 
 인덱스의 개수(5개) 만큼 데이터가 생성되었음을 알 수 있습니다.
