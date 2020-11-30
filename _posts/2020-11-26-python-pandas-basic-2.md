@@ -164,7 +164,7 @@ pd_series = pd.Series(dict_data, index=['a', 'b', 'c', 'd'])
 
 ```python
 scalar_data = 'Y'
-pd_series = pd.Series(scalar_data, index=[0,1,2,3,4])
+pd_series = pd.Series(scalar_data, index=[0, 1, 2, 3, 4])
 ```
 > 0    Y  
 > 1    Y  
