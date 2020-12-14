@@ -4,6 +4,27 @@ date: 2020-12-11 00:10:00 -0000
 categories: Python
 ---
 
+## 컴프리헨션 (Comprehension)
+#### 리스트 컴프리헨션
+```python
+[표현식 for 임시변수명 in 원본리스트명]
+```
+
+#### 집합 컴프리헨션
+```python
+{표현식 for 임시변수명 in 원본집합명}
+```
+
+#### 딕셔너리 컴프리헨션
+```python
+{표현식 for 임시변수명 in 원본딕셔너리명}
+```
+
+#### 제너레이터 컴프리헨션
+```python
+(표현식 for 임시변수명 in 반복가능객체명)
+```
+
 ## 함수
 #### 함수 정의
 ```python
@@ -329,11 +350,23 @@ next(iterator객체명, 기본값)
 ```
 
 ## 제너레이터 (Generator)
-#### 제너레이터 구현
+#### 제너레이터 정의
 ```python
-def 함수명:
+def 제너레이터함수명:
   yield 값1
   yield 값2
   yield 값3
 ```
+
+```python
+def 제너레이터함수명:
+  yield form 반복가능한객체명
+```
+
+#### 반복문과 제너레이터
+```python
+for i in 제너레이터함수명():
+  print(i)
+```
+
 
