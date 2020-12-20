@@ -18,25 +18,25 @@ https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
   1. 로컬에서 빈 develop 브랜치 생성  
   ```
   git branch develop
-  ```
+  ```  
   2. develop 브랜치를 origin에 푸쉬  
   ```
   git push -u origin develop
-  ```
+  ```  
 2\) feature 브랜치 생성  
   1. develop 브랜치 체크아웃  
   ```
   git checkout develop
-  ```
+  ```  
   2. feature 브랜치 생성 및 체크아웃  
   ```
   git checkout -b feature_branch
-  ```
+  ```  
 3\) feature 브랜치 종료  
   1. develop 브랜치 체크아웃  
   ```
   git checkout develop
-  ```
+  ```  
   2. feature 브랜치를 develop 브랜치에 병합  
   ```
   git merge feature_branch
