@@ -86,6 +86,43 @@ CONTAINER ID   IMAGE                        COMMAND                  CREATED    
 707defb0daba   wnameless/oracle-xe-11g-r2   "/bin/sh -c '/usr/sb…"   5 seconds ago   Up 4 seconds   22/tcp, 8080/tcp, 0.0.0.0:49161->1521/tcp   oracle-xe-11g-r2
 ```
 
+컨테이너 내 Linux 환경에서 bash 쉘 명령어를 입력하기 위해서는 docker exec 명령어를 실행합니다.
+```
+docker exec -it oracle-xe-11g-r2 /bin/sh
+```
+
+다음과 같이 출력된다면 접속에 성공한 것입니다.
+```
+#
+```
+
+이제 Oracle에 접속하기 위해 다음 명령을 실행합니다.
+```
+# su - oracle
+```
+
+다음과 같이 출력된다면 접속에 성공한 것입니다.
+```
+oracle@a7b919d06019:~$ 
+```
+
+SQL Plus를 실행하기 위해 다음 명령을 실행합니다. 
+```
+sqlplus '/as sysdba'
+```
+
+```
+SQL*Plus: Release 11.2.0.2.0 Production on Thu Dec 24 07:37:17 2020
+
+Copyright (c) 1982, 2011, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+
+SQL> 
+```
+
 ## 4. Oracle SQL Developer 설치 및 데이터베이스 연결 후 접속
 https://www.oracle.com/downloads/software-license-agreement.html#license-lightbox
 
@@ -100,7 +137,7 @@ Finder에서 Control 키를 누른 상태에서 우클릭하여 '열기'를 클�
 
 다음 정보로 연결 정보를 입력합니다.
 
-hostname: localhost  
+> hostname: localhost  
 port: 49161  
 sid: xe  
 username: system  
