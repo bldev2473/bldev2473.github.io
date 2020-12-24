@@ -39,11 +39,17 @@ docker pull wnameless/oracle-xe-11g-r2
 ```
 
 ```
-8: Pulling from library/oraclelinux
-2b4292144c8f: Pull complete 
-Digest: sha256:ce68d5f2083bc9c9dd53e5d1dd223e1c497e02f74daaffc77512744d8cfa548c
-Status: Downloaded newer image for oraclelinux:8
-docker.io/library/oraclelinux:8
+Using default tag: latest
+latest: Pulling from wnameless/oracle-xe-11g-r2
+5667fdb72017: Pull complete 
+d83811f270d5: Pull complete 
+ee671aafb583: Pull complete 
+7fc152dfb3a6: Pull complete 
+51896e240a72: Pull complete 
+64e16b57ee0a: Pull complete 
+Digest: sha256:e8cfa3733a2c11b415fb94a9632424025d69165fb4903a22206f6073be30eeb9
+Status: Downloaded newer image for wnameless/oracle-xe-11g-r2:latest
+docker.io/wnameless/oracle-xe-11g-r2:latest
 ```
 
 다운로드한 이미지를 확인해봅니다.
@@ -56,10 +62,10 @@ REPOSITORY                   TAG       IMAGE ID       CREATED         SIZE
 wnameless/oracle-xe-11g-r2   latest    0d19fd2e072e   15 months ago   2.1GB
 ```
 
-Docker Hub에서 실행에 대한 설명을 볼 수 있습니다.
+Docker Hub에서 실행에 대한 설명을 볼 수 있습니다.  
 https://hub.docker.com/r/wnameless/oracle-xe-11g-r2
 
-GitHub Repository 주소도 공유되어 있습니다.
+GitHub Repository 주소도 공유되어 있습니다.  
 https://github.com/wnameless/docker-oracle-xe-11g
 
 ## 3. 컨테이너 실행
