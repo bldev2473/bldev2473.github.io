@@ -1,16 +1,16 @@
 ---
-title: "[Docker] Docker를 통한 Oracle 11g 설치 및 Oracle SQL Developer 연결"
+title: "[Docker] Mac OS에서 Docker를 통한 Oracle 11g 설치 및 Oracle SQL Developer 연결"
 date: 2020-12-24 00:10:00 -0000
-categories: Docker, Oracle
+categories: Mac, Docker, Oracle
 ---
 
-현재까지 Oracle에서는 Oracle 데이터베이스를 Mac OS 운영체제에 직접 설치하여 사용할 수 있는 방법을 지원하지 않고 있습니다.
+현재 Oracle에서는 Oracle 데이터베이스를 Mac OS 운영체제에 직접 설치하여 사용할 수 있는 방법을 지원하지 않습니다.
 따라서 가상 머신이나 컨테이너 기반 Docker를 사용하는 방법을 사용하면 됩니다.
 
 보다 빠르고 간편한 방법인 Docker를 사용하여
 Oracle 데이터베이스 서비스를 설치하고 SQL 쿼리 작성 및 실행을 위한 클라이언트인 Oracle SQL Developer와 연결해보겠습니다.
 
-## 1. Docker 설치 후 Docker CLI에 접속합니다.
+## 1. Docker 설치 후 Docker CLI에 접속
 
 ## 2. Docker 이미지 검색 및 다운로드
 
@@ -83,7 +83,7 @@ CONTAINER ID   IMAGE                        COMMAND                  CREATED    
 ## 4. Oracle SQL Developer 설치 및 데이터베이스 연결 후 접속
 https://www.oracle.com/downloads/software-license-agreement.html#license-lightbox
 
-Mac OSX 용 파일을 다운로드 합니다. (계정 로그인이 필요합니다.)
+Mac OS 용 파일을 다운로드 합니다. (계정 로그인이 필요합니다.)
 
 압푹을 풀고 실행합니다.
 
@@ -121,4 +121,3 @@ SQL Developer 프로그램을 다시 실행한 후 접속 정보를 입력하고
 연결이 정상적으로 되었다면 '상태:성공' 메시지가 출력됩니다.
 
 '접속' 버튼을 클릭하면 Docker 컨테이너가 제공하는 Oracle 데이터베이스에 접속할 수 있습니다.
-
