@@ -63,10 +63,10 @@ wnameless/oracle-xe-11g-r2   latest    0d19fd2e072e   15 months ago   2.1GB
 ```
 
 Docker Hub에서 실행에 대한 설명을 볼 수 있습니다.  
-https://hub.docker.com/r/wnameless/oracle-xe-11g-r2
+[Docker Hub](https://hub.docker.com/r/wnameless/oracle-xe-11g-r2)
 
 GitHub Repository 주소도 공유되어 있습니다.  
-https://github.com/wnameless/docker-oracle-xe-11g
+[GitHub - wnameless/docker-oracle-xe-11g: Dockerfile of Oracle Database Express Edition 11g Release 2](https://github.com/wnameless/docker-oracle-xe-11g)
 
 ## 3. 컨테이너 실행
 다운로드 한 이미지를 사용하여 컨테이너를 실행하기 위해 docker run 명령어를 사용합니다.
@@ -124,7 +124,7 @@ SQL>
 ```
 
 ## 4. Oracle SQL Developer 설치 및 데이터베이스 연결 후 접속
-https://www.oracle.com/downloads/software-license-agreement.html#license-lightbox
+[](https://www.oracle.com/downloads/software-license-agreement.html#license-lightbox)
 
 Mac OS 용 파일을 다운로드 합니다. (계정 로그인이 필요합니다.)
 
