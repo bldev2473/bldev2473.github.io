@@ -124,7 +124,7 @@ SQL>
 ```
 
 ## 4. Oracle SQL Developer 설치 및 데이터베이스 연결 후 접속
-[](https://www.oracle.com/downloads/software-license-agreement.html#license-lightbox)
+[https://www.oracle.com/tools/downloads/sqldev-downloads.html](https://www.oracle.com/tools/downloads/sqldev-downloads.html)
 
 Mac OS 용 파일을 다운로드 합니다. (계정 로그인이 필요합니다.)
 
