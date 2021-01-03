@@ -38,7 +38,7 @@ django-admin startporject 프로젝트명
 
 명령어를 통해 새로운 프로젝트를 생성하고
 
-해당 프로젝트 디렉토리 경로에서
+해당 프로젝트의 루트 디렉토리 경로에서
 
 ```
 python manage.py startapp 애플리케이션명
@@ -56,9 +56,9 @@ INSTALLED_APPS 값에 새로 생성한 애플리케이션의 설정 클래스가
 
 ## 2. GitHub에 레포지토리 생성 및 프로젝트 연결
 
-먼저 GitHub에서 레포지토리를 생성합니다. 레포지토리 이름을 Pycharm의 프로젝트 이름으로 사용하려는 경우 대시(-) 기호를 포함하지 않도록 합니다.
+먼저 GitHub에서 레포지토리를 생성합니다.
 
-먼저 Django 프로젝트의 루트 경로에 .gitignore 파일을 생성하여 가상 환경 폴더, 기타 설정 파일 등을 추적하지 않도록 합니다.
+먼저 Django 프로젝트의 루트 디렉토리 경로에 .gitignore 파일을 생성하여 가상 환경 폴더, 기타 설정 파일 등을 추적하지 않도록 합니다.
 
 [https://www.toptal.com/developers/gitignore](https://www.toptal.com/developers/gitignore) 사이트를 이용하면 운영체제, IDE, 프레임워크 별로 사용하면 손쉽게 .gitignore 파일 내용을 구성할 수 있습니다.
 
