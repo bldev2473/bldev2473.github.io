@@ -1,7 +1,7 @@
 ---
 title: "[Docker] Mac OS에서 Docker를 통한 Oracle 11g 설치 및 Oracle SQL Developer 연결"
 date: 2020-12-24 00:10:00 -0000
-categories: Mac, Docker, Oracle
+categories: [Mac, Docker, Oracle]
 ---
 
 현재 Oracle에서는 Oracle 데이터베이스를 Mac OS 운영체제에 직접 설치하여 사용할 수 있는 방법을 지원하지 않습니다.

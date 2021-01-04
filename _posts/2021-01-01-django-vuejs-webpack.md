@@ -1,7 +1,7 @@
 ---
 title: "[Django, Vue.js] Django 및 Vue.js 프레임워크에서 웹팩(Webpack) 사용하기 1"
 date: 2021-01-01 00:10:00 -0000
-categories: Django, Vue.js, Webpack
+categories: [Django, Vue.js, Webpack]
 ---
 
 Webpack은 모듈 번들러(module bundler)입니다.
