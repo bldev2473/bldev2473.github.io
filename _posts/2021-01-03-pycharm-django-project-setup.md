@@ -1,7 +1,9 @@
 ---
 title: "[Django] Pycharm을 사용하여 Django 프레임워크 프로젝트 생성하기"
 date: 2021-01-03 00:10:00 -0000
-categories: Django, Pycharm
+categories:
+  - Django
+  - Pycharm
 ---
 
 ## 1. 새로운 Django 프레임워크 프로젝트 생성
