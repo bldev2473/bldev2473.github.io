@@ -26,5 +26,49 @@ Django 프레임워크는 django.contrib.staticfiles라는 앱을 통해 정적 
 1. INSTALLED_APPS 값에 'django.contrib.staticfiles'를 포함시킵니다. => staticfiles라는 앱이 아래 설정들을 통해 프로젝트가 정적 파일들을 사용하여 웹 페이지를 구성할 수 있도록 만들어 줍니다. 
 2. STATIC_ROOT를 지정합니다. => 정적 파일들이 위치한 절대 경로가 됩니다. Django의 collectstatic이라는 명령어는 staticfiles라는 앱이 이 절대 경로에 정적 파일들을 모아두게 합니다. Apache나 Nginx와 같은 별도의 웹 서버에 이 디렉토리만 알려주면 됩니다.
 
+프로젝트 루트 디렉토리 경로에서 npm 명령어를 실행하여 Webpack을 설치합니다.
+```
+npm init -y
+```
+```
+npm install webpack webpack-cli --save-dev
+```
+
+설치가 완료되면 루트 디렉토리에 node_modules 폴더와 package.json, package-lock.json 파일이 생성됩니다.
+
+Webpack의 설정을 변경하기 위해 프로젝트 루트 디렉토리 경로에 webpack.config.js 파일을 하나 생성하고 다음 내용을 추가합니다.
+
+```js
+const path = require('path');
+
+module.exports = {
+  entry: '엔트리포인트가 될 자바스크립트 파일 경로',
+  output: {
+    filename: 'main.js',
+    path: path.resolve(__dirname, '애플리케이션의 static 폴더 경로'),
+    publicPath: "/static/",
+  },
+};
+```
+
+예를 들어 다음과 같이 지정하면 됩니다.
+```js
+const path = require('path');
+
+module.exports = {
+  entry: 'myapp/static/myapp/index.js',
+  output: {
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'myapp/static/myapp'),
+    publicPath: "/static/",
+  },
+};
+```
+
+새로운 설정으로 Webpack을 다시 빌드하기 위해 다음 명령어를 입력합니다.
+```
+npx webpack --config webpack.config.js 
+```
+
 ## Vue CLI와 웹팩
 [https://github.com/vuejs/vue-cli/blob/dev/docs/guide/webpack.md](https://github.com/vuejs/vue-cli/blob/dev/docs/guide/webpack.md)
