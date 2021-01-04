@@ -14,11 +14,9 @@ Project Interpreter: New Virtualenv environment를 클릭합니다.
 
 New environment using 항목에서는
 
-1. Location: 프로젝트 별 패키지 환경을 분리하기 위해 파이썬이 제공하는 가상환경(Virtualenv)을 사용합니다.
+- Location: 프로젝트 별 패키지 환경을 분리하기 위해 파이썬이 제공하는 가상환경(Virtualenv)을 사용합니다. 아나콘다가 제공하는 Conda 가상 환경을 사용할 수도 있습니다.
 
-- 아나콘다가 제공하는 Conda 가상 환경을 사용할 수도 있습니다.
-
-2. Base interpreter: 사용할 파이썬 언어 버전을 지정합니다.
+- Base interpreter: 사용할 파이썬 언어 버전을 지정합니다.
 
 More Settings를 클릭합니다.
 
@@ -33,7 +31,7 @@ More Settings를 클릭합니다.
 이렇게 하면
 
 ```
-django-admin startporject 프로젝트명
+django-admin startproject 프로젝트명
 ```
 
 명령어를 통해 새로운 프로젝트를 생성하고
