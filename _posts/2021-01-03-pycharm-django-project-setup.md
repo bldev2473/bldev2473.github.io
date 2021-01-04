@@ -58,11 +58,11 @@ INSTALLED_APPS 값에 새로 생성한 애플리케이션의 설정 클래스가
 
 먼저 GitHub에서 레포지토리를 생성합니다.
 
-먼저 Django 프로젝트의 루트 디렉토리 경로에 .gitignore 파일을 생성하여 가상 환경 폴더, 기타 설정 파일 등을 추적하지 않도록 합니다.
+Django 프로젝트의 루트 디렉토리 경로에 .gitignore 파일을 생성하여 가상 환경 설정 폴더, 기타 설정 파일 등을 추적하지 않도록 합니다.
 
-[https://www.toptal.com/developers/gitignore](https://www.toptal.com/developers/gitignore) 사이트를 이용하면 운영체제, IDE, 프레임워크 별로 사용하면 손쉽게 .gitignore 파일 내용을 구성할 수 있습니다.
+[https://www.toptal.com/developers/gitignore](https://www.toptal.com/developers/gitignore) 사이트를 이용하면 운영체제, IDE, 프레임워크 별로 손쉽게 .gitignore 파일 내용을 구성할 수 있습니다.
 
-이제 Pycharm에서 생성한 Django 프로젝트의 루트 경로에서 터미널을 실행하여 다음 git 명령어를 입력합니다.
+이제 Pycharm에서 생성한 Django 프로젝트의 루트 경로에서 터미널을 실행하여 다음 git 명령어를 차례대로 입력합니다.
 
 ```
 git init
