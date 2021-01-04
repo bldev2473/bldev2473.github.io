@@ -109,11 +109,19 @@ Python Interpreter: <No interpreter> 오른쪽의 설정 아이콘을 클릭한 
 
 이제 프로젝트 루트 폴더를 우클릭하여 Open In - Terminal을 클릭하면 해당 가상 환경에서 파이썬 인터프리터를 사용할 수 있습니다.
 
-
 ```
 python manage.py runserver
 ```
 
 명령어를 입력하여 Django 프레임워크의 정상 작동을 확인합니다.
 
+## requirements.txt 파일을 이용한 가상 환경 설정
+requirements.txt 파일을 이용하여 가상 환경을 생성하고 필요한 패키지를 설치할 수도 있습니다.
 
+requirements.txt 파일은 파이썬 패키지를 관리하기 위해 사용하는 파이썬 패키지 목록 파일이며 pip install 명령어 실행 시 옵션으로 -r 인자를 전달함으로써 해당 파일로부터 패키지를 한 번에 설치할 수 있습니다.
+
+필요한 파이썬 패키지들을 requirements.txt에 목록으로 나열한 후 파일을 프로젝트 루트 디렉토리 경로에 위치시킵니다.
+
+Pycharm에서 프로젝트를 열고 가상 환경이 설정되지 않은 상태에서 .py 파일을 하나 열면 상단에 "No Python interpreter configured for the project"라는 메시지가 출력됩니다. Pycharm이 프로젝트의 가상 환경이 설정되지 않았음을 확인한 것으로, 우측의 "Create a virtual environment using requirements.txt"를 클릭하면 가상 환경을 생성할 것인지 물어보는 팝업 창이 나오게 됩니다.
+
+Location, Base interpreter, Dependencies 항목이 자동으로 지정된 것을 확인한 후 OK 버튼을 클릭합니다. 프로젝트 설정에서 직접 가상 환경을 설정해준 것과 동일하게 해당 경로에 venv 폴더가 생성되고 파이썬 패키지를 관리할 수 있게 되었습니다.
