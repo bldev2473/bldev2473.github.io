@@ -88,8 +88,32 @@ git remote add origin GitHub_레포지토리_URL
 git push -u origin main
 ```
 
- 
+## 3. Pycharm에서 GitHub 레포지토리 클론 및 프로젝트 구성
+GitHub에 레포지토리를 생성한 상태에서 Pycharm에서 해당 레포지토리를 클론하여 새로운 Django 프레임워크 프로젝트를 생성할 수도 있습니다.
+
+Git - Clone을 클릭합니다.
+
+해당 레포지토리 URL을 입력한 후 Clone을 클릭합니다.
+
+Pycharm에서 새로 프로젝트를 구성하지 않았으므로 가상 환경 설정이 필요합니다.
+
+File - Setting을 클릭합니다.
+
+Project: 프로젝트명 밑의 Python Interpreter를 클릭합니다.
+
+Python Interpreter: <No interpreter> 오른쪽의 설정 아이콘을 클릭한 후 Add를 클릭합니다. Virtualenv interpreter를 클릭한 후 Location, Base interpreter를 지정한 다음 OK를 클릭합니다. 해당 경로에 venv 폴더가 생성되고 파이썬 패키지를 관리할 수 있게 되었습니다.
+
+하단의 + 버튼을 클릭하고 "Django"를 입력하여 패키지를 검색합니다. "Django" 패키지를 선택하고 Install Package를 클릭합니다.
+
+패키지가 성공적으로 설치되었다는 메시지를 확인한 후 OK 버튼을 클릭합니다.
+
+이제 프로젝트 루트 폴더를 우클릭하여 Open In - Terminal을 클릭하면 해당 가상 환경에서 파이썬 인터프리터를 사용할 수 있습니다.
 
 
+```
+python manage.py runserver
+```
+
+명령어를 입력하여 Django 프레임워크의 정상 작동을 확인합니다.
 
 
