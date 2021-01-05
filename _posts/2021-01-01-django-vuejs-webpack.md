@@ -24,7 +24,7 @@ Django 프레임워크는 내부적으로 정적 자원들을 처리하도록 �
 Django 프레임워크는 django.contrib.staticfiles라는 앱을 통해 정적 파일들을 제공하고 있으므로 프로젝트 구성 시 프로젝트의 setting.py 파일에 다음과 같은 설정이 필요합니다.
 
 1. INSTALLED_APPS 값에 'django.contrib.staticfiles'를 포함시킵니다. => staticfiles라는 앱이 아래 설정들을 통해 프로젝트가 정적 파일들을 사용하여 웹 페이지를 구성할 수 있도록 만들어 줍니다. 
-2. STATIC_ROOT를 지정합니다. => 정적 파일들이 위치한 절대 경로가 됩니다. Django의 collectstatic이라는 명령어는 staticfiles라는 앱이 이 절대 경로에 정적 파일들을 모아두게 합니다. Apache나 Nginx와 같은 별도의 웹 서버에 이 디렉토리만 알려주면 됩니다.
+2. STATIC_ROOT를 지정합니다. => 정적 파일들이 위치한 절대 경로가 됩니다. Django의 collectstatic이라는 명령어는 staticfiles라는 앱이 이 절대 경로에 정적 파일들을 모아두게 합니다. Apache나 Nginx와 같은 별도의 웹 서버에 이 디렉토리만 알려주면 됩니다. 즉, staticfiles는 정적 파일들을 단일 위치로 모아서 프로덕션 환경에서 쉽게 제공될 수 있도록 해줍니다.
 
 프로젝트 루트 디렉토리 경로에서 npm 명령어를 실행하여 Webpack을 설치합니다.
 ```
