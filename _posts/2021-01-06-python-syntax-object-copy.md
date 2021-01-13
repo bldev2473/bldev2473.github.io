@@ -43,4 +43,12 @@ import copy as cp
 새로운객체명 = cp.deepcopy(기존객체명)
 ```
 
+## 객체 메모리 주소값 확인
+
+- id() 함수와 hex() 함수를 통해 객체가 저장되어 있는 메모리 주소값을 16진수로 확인
+
+```python
+hex(id(객체명))
+```
+
 #### 참고자료: [https://docs.python.org/3/library/copy.html](https://docs.python.org/3/library/copy.html)
