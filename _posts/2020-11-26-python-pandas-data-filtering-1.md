@@ -24,7 +24,7 @@ fillna() 함수를 사용하면 특정 컬럼 데이터가 Null 값인 경우 �
 ```python
 data_df['RESULT'] = data_df['RESULT'].fillna('')
 ```
-  * 'RESULT' 컬럼의 데이터가 Null 값인 경우 빈 값으로 변환
+* 'RESULT' 컬럼의 데이터가 Null 값인 경우 빈 값으로 변환
   
 &#45; 참고: fillna() 함수는 기본적으로 inplace가 적용되지 않지만 옵션으로 inplace를 적용할 수 있으며 이 경우 다음과 같이 사용합니다.
 > 데이터프레임명['컬럼명'].fillna(대체값, inplace=True)
@@ -42,7 +42,7 @@ data_df['RESULT'] = data_df['RESULT'].fillna('')
 ```python
 data_df['RESULT'] = (data_df['RESULT'] == 'Y').astype(int)
 ```
-  * 'RESULT' 컬럼의 데이터가 'Y'인 경우 1, 'Y'가 아닌 경우 0으로 변환
+* 'RESULT' 컬럼의 데이터가 'Y'인 경우 1, 'Y'가 아닌 경우 0으로 변환
   
 &#45; 새로운 컬럼 추가
 ```python
@@ -112,13 +112,13 @@ numpy에서 제공하는 where() 함수와 pandas의 where() 함수의 시그니
 ```python
 data_df['RESULT'] = data_df.where(data_df['RESULT'] == Y, 0)
 ```
-  * 'RESULT' 컬럼의 데이터가 'Y'인 경우 그대로, 'Y'가 아닌 경우 0으로 변환
+* 'RESULT' 컬럼의 데이터가 'Y'인 경우 그대로, 'Y'가 아닌 경우 0으로 변환
   
 &#45; 예2
 ```python
 data_df['RESULT'] = data_df.where(data_df['RESULT'] == Y, data_df['RESULT'])
 ```
-  * 이렇게 작성하면 데이터가 변환되지 않게 됩니다.
+* 이렇게 작성하면 데이터가 변환되지 않게 됩니다.
   
 &#45; 새로운 컬럼 추가
 ```python
