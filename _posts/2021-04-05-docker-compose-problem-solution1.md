@@ -1,5 +1,5 @@
 ---
-title: "[Docker] Docker 실행 시 operation not permitted 문제 해결 방법
+title: "[Docker] Docker 실행 시 operation not permitted 문제 해결 방법"
 date: 2021-04-05 00:10:00 -0000
 categories: [Docker, Mac]
 ---
