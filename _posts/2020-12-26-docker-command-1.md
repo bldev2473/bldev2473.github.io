@@ -56,6 +56,11 @@ docker rm 컨테이너ID
 docker rm $(docker ps -aq)
 ```
 
+#### 컨테이너의 쉘 접근
+```
+docker exec -i -t 컨테이너ID /bin/bash
+```
+
 ## Docker Compose 명령어
 컨테이너 구성 정보인 docker-compose.yml 파일이 위치한 경로에서 다음 CLI 명령어를 실행합니다.
 
