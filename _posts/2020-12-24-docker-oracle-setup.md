@@ -35,6 +35,8 @@ thebookpeople/oracle-xe-11g                                                     
 jaspeen/oracle-xe-11g               Fork from sath89/docker-oracle-xe-11g - smal…   3                    [OK]
 ```
 
+
+
 ```wnameless/oracle-xe-11g-r2``` 이미지를 다운로드해보겠습니다.
 
 Oracle Express Edition 11g Release 2 on Ubuntu 18.04 LTS 이미지입니다.
@@ -59,6 +61,8 @@ Status: Downloaded newer image for wnameless/oracle-xe-11g-r2:latest
 docker.io/wnameless/oracle-xe-11g-r2:latest
 ```
 
+
+
 다운로드한 이미지를 확인해봅니다.
 
 > Docker 이미지 확인
@@ -72,10 +76,12 @@ REPOSITORY                   TAG       IMAGE ID       CREATED         SIZE
 wnameless/oracle-xe-11g-r2   latest    0d19fd2e072e   15 months ago   2.1GB
 ```
 
-Docker Hub에서 실행에 대한 설명을 볼 수 있으며 
+
+
+```wnameless/oracle-xe-11g-r2``` 이미지의 경우 Docker Hub에서 실행에 대한 설명을 볼 수 있으며
 [Docker Hub](https://hub.docker.com/r/wnameless/oracle-xe-11g-r2)
 
-GitHub Repository 주소도 공유되어 있습니다.  
+GitHub Repository 주소도 공유되어 있습니다.
 [GitHub - wnameless/docker-oracle-xe-11g: Dockerfile of Oracle Database Express Edition 11g Release 2](https://github.com/wnameless/docker-oracle-xe-11g)
 
 
@@ -83,13 +89,15 @@ GitHub Repository 주소도 공유되어 있습니다.
 ## 3. 컨테이너 실행
 다운로드 한 이미지를 사용하여 컨테이너를 실행하기 위해 ```docker run``` 명령어를 사용합니다.
 
-1521 포트로 컨테이너를 실행합니다. 이때 ```--name``` 옵션으로 컨테이너 이름을 지정합니다.
+1521 포트로 컨테이너를 실행하며 이때 ```--name``` 옵션으로 컨테이너 이름을 지정합니다.
 
 > Docker 컨테이너 실행
 
 ```
 docker run --name oracle-xe-11g-r2 -d -p 49161:1521 wnameless/oracle-xe-11g-r2
 ```
+
+
 
 컨테이너 목록을 확인해보겠습니다.
 
@@ -104,6 +112,8 @@ CONTAINER ID   IMAGE                        COMMAND                  CREATED    
 707defb0daba   wnameless/oracle-xe-11g-r2   "/bin/sh -c '/usr/sb…"   5 seconds ago   Up 4 seconds   22/tcp, 8080/tcp, 0.0.0.0:49161->1521/tcp   oracle-xe-11g-r2
 ```
 
+
+
 컨테이너 내 Linux 환경에서 bash 셸에 접속하기 위해서는 ```docker exec``` 명령어를 실행합니다.
 
 > Docker 컨테이너에서 명령어 실행
@@ -116,7 +126,10 @@ docker exec -it oracle-xe-11g-r2 /bin/sh
 #
 ```
 
+
+
 이제 Oracle에 접속하기 위해 다음 명령을 실행합니다.
+
 ```
 # su - oracle
 ```
@@ -125,7 +138,10 @@ docker exec -it oracle-xe-11g-r2 /bin/sh
 oracle@a7b919d06019:~$ 
 ```
 
+
+
 마지막으로 SQL Plus를 실행하기 위해 다음 명령을 실행합니다. 
+
 ```
 sqlplus '/as sysdba'
 ```
@@ -148,7 +164,7 @@ SQL>
 
 [https://www.oracle.com/tools/downloads/sqldev-downloads.html](https://www.oracle.com/tools/downloads/sqldev-downloads.html)
 
-Mac OS 용 파일을 다운로드 한 후(계정 로그인이 필요) 압축을 풀고 실행합니다.
+Mac OS 용 파일을 다운로드 한 후(계정 로그인 필요) 압축을 풀고 실행합니다.
 
 만약 ```SQLDeveloper’은(는) Apple에서 악성 소프트웨어가 있는지 확인할 수 없기 때문에 열 수 없습니다.```라는 메시지가 출력되면. Finder에서 ```Control``` 키를 누른 상태에서 우클릭하여 '열기'를 클릭하여 실행합니다.
 
@@ -162,19 +178,19 @@ sid: xe
 username: system  
 password: oracle  
 
----
-
 연결 확인을 위해 ```Test``` 버튼을 클릭합니다.
 
-최근 OS 업데이트를 해서인지 ```Local not recognized``` 오류가 발생했습니다.
+이 때 ```Local not recognized``` 오류가 발생할 경우 다음 방법으로 해결할 수 있습니다.
 
-SQL Developer 프로그램 종료 후 관련 정보를 추가하기 위해 실행 파일을 우클릭하여 '패키지 내용 보기'를 클릭합니다.
+---
+
+SQL Developer 프로그램 종료 후 관련 정보를 추가하기 위해 실행 파일을 우클릭하여 ```패키지 내용 보기```를 클릭합니다.
 
 다음 경로
 ```
 SQLDeveloper.app/Contents/Resources/sqldeveloper/sqldeveloper/bin
 ```
-의 'sqldeveloper.conf' 파일을 텍스트 편집기로 열어 다음 옵션을 추가합니다.
+의 ```sqldeveloper.conf``` 파일을 텍스트 편집기로 열어 다음 옵션을 추가합니다.
 ```
 AddVMOption -Duser.language=ko
 AddVMOption -Duser.country=KR
